@@ -6,25 +6,22 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
 </head>
 <body>
 
 
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <div class="dropdown">
-            <button class="dropbtn">
-                Dropdown
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
+        <span class="glyphicon glyphicon-fire"></span>
+        @Html.ActionLink("Home", "Index", "Home")
+
+        @Html.ActionLink("Accessories", "Index", "Accessories")
+        @Html.ActionLink("Bottoms", "Index", "Bottoms")
+        @Html.ActionLink("Tops", "Index", "Tops")
+        @Html.ActionLink("Shoes", "Index", "Shoes")
+
     </div>
+    
 
 
 

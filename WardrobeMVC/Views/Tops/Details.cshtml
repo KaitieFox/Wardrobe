@@ -7,19 +7,20 @@
 <div class="jumbotron" id="topdetails">
     <h1>Wardrobe for a Revolution</h1>
     <p class="lead">organize your clothes to suit your cause.</p>
-    </div>
-    
+    <p class="glyphicon glyphicon-fire"></p>
+</div>
+
 <div class="row">
     <div class="col-md-12">
         <div class="thumbnail" style="color:black; text-align:center">
-            <img src=@Html.DisplayFor(model => model.TopPhoto) alt="...">
+            <img src=@Html.DisplayFor(model => model.TopPhoto) alt="Tops">
             <div class="caption">
                 <h3>@Html.DisplayFor(model => model.TopName)</h3>
                 <p>
-                    @Html.DisplayFor(model => model.TopNotes)
-                    @Html.DisplayFor(model => model.Season.SeasonName)
-                    @Html.DisplayFor(model => model.Occasion.OccasionName)
-                    @Html.DisplayFor(model => model.Color.ColorName)
+                    @Html.DisplayFor(model => model.TopNotes)<br />
+                    @Html.DisplayFor(model => model.Season.SeasonName)<br />
+                    @Html.DisplayFor(model => model.Occasion.OccasionName)<br />
+                    @Html.DisplayFor(model => model.Color.ColorName)<br />
                 </p>
                 <p>@Html.ActionLink("Edit This", "Edit", "Tops", new { id = Model.TopID }, new { @class = "btn btn-default" }) @Html.ActionLink("Back to List", "Index", "Tops", new { @class = "btn btn-default" })</p>
             </div>
@@ -31,69 +32,3 @@
 
 
 
-    @*<div>
-            <h4>Top</h4>
-            <hr />
-            <dl class="dl-horizontal">
-                <dt>
-                    @Html.DisplayNameFor(model => model.TopName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.TopName)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.TopPhoto)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.TopPhoto)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.TopNotes)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.TopNotes)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.ClothesType.TypeName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.ClothesType.TypeName)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.Color.ColorName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.Color.ColorName)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.Occasion.OccasionName)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.Season.SeasonName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.Season.SeasonName)
-                </dd>
-
-            </dl>
-        </div>
-        <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
-            @Html.ActionLink("Back to List", "Index")
-        </p>*@

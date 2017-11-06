@@ -5,29 +5,25 @@
 <div class="jumbotron" id="homeindex">
     <h1>Wardrobe for a Revolution</h1>
     <p class="lead">organize your clothes to suit your cause.</p>
+    <p class="glyphicon glyphicon-fire"></p>
 </div>
 
 <div class="row">
     <div class="col-md-12" style="text-align:center">
         <h2>Add New Peace of Clothing</h2>
-        <p>
-            
-        </p>
-       @Html.ActionLink("New Top", "Create", "Tops", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("New Top", "Create", "Tops", null, new { @class = "btn btn-default" })
         @Html.ActionLink("New Bottom", "Create", "Bottoms", null, new { @class = "btn btn-default" })
         @Html.ActionLink("New Shoes", "Create", "Shoes", null, new { @class = "btn btn-default" })
         @Html.ActionLink("New Accessory", "Create", "Accessories", null, new { @class = "btn btn-default" })
     </div>
+</div>
 
 
+<div class="col-md-12" style="text-align:center">
+    <h2>View by Clothing Type</h2>
+    @Html.ActionLink("Tops", "Index", "Tops", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Bottoms", "Index", "Bottoms", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Shoes", "Index", "Shoes", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Accessories", "Index", "Accessories", null, new { @class = "btn btn-default" })
 
-    <div class="col-md-6">
-        <h2></h2>
-        
-    </div>
-    <div class="col-md-6">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
 </div>

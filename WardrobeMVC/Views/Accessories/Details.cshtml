@@ -8,6 +8,7 @@
     <div class="container">
         <h1>Wardrobe for a Revolution</h1>
         <p class="lead">organize your clothes to suit your cause.</p>
+        <p class="glyphicon glyphicon-fire"></p>
     </div>
 </div>
 
@@ -19,9 +20,9 @@
                 <h3>@Html.DisplayFor(model => model.AccessoryName)</h3>
             </div>
             <div>
-                <p>@Html.DisplayFor(model => model.AccessoryNotes)</p>
-                <p>@Html.DisplayFor(model => model.Season.SeasonName)</p>
-                <p>@Html.DisplayFor(model => model.Occasion.OccasionName)</p>
+                <p>@Html.DisplayFor(model => model.AccessoryNotes)</p> 
+                <p>@Html.DisplayFor(model => model.Season.SeasonName)</p> 
+                <p>@Html.DisplayFor(model => model.Occasion.OccasionName)</p> 
                 <p>@Html.DisplayFor(model => model.Color.ColorName)</p>
 
                 <p>@Html.ActionLink("Edit This", "Edit", "Accessories", new { id = Model.AccessoryID }, new { @class = "btn btn-default" }) @Html.ActionLink("Back to List", "Index", "Accessories", new { @class = "btn btn-default" })</p>
@@ -31,69 +32,3 @@
 </div>
 
 
-@*<div>
-        <h4>Accessory</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.AccessoryName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.AccessoryName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.AccessoryPhoto)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.AccessoryPhoto)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.AccessoryNotes)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.AccessoryNotes)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ClothesType.TypeName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ClothesType.TypeName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Color.ColorName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Color.ColorName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Occasion.OccasionName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Season.SeasonName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Season.SeasonName)
-            </dd>
-
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>*@
