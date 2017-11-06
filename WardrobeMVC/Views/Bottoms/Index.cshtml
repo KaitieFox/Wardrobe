@@ -1,0 +1,91 @@
+﻿@model IEnumerable<WardrobeMVC.Models.Bottom>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron" id="accessoryindex">
+    <div class="container">
+        <h1>Wardrobe for a Revolution</h1>
+        <p class="lead">organize your clothes to suit your cause.</p>
+        <p>@Html.ActionLink("Create New Bottoms", "Create", "Bottoms", null, new { @class = "btn btn-default" })</p>
+    </div>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src=@Html.DisplayFor(modelItem => item.BottomPhoto) alt="Bottoms">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.BottomName)</h3>
+                    <p>@Html.ActionLink("View Details", "Details", "Bottoms", new { id = item.BottomID }, new { @class = "btn btn-default" })</p>
+                    <p><span>@Html.ActionLink("Edit This", "Edit", "Tops", new { id = item.BottomID }, new { @class = "btn btn-default" })</span></p>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomPhoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClothesType.TypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color.ColorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Season.SeasonName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomPhoto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClothesType.TypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color.ColorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Season.SeasonName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BottomID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BottomID })
+        </td>
+    </tr>
+}
+
+</table>*@
